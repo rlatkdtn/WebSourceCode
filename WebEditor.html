@@ -1,0 +1,124 @@
+<html>
+<head>
+<!--link rel="stylesheet" type="text/css" href="lib/codemirror.css"-->
+<style type="text/css">
+	body {
+
+		margin: 0;
+
+		background: skyblue;
+	}
+
+	.header {
+
+		height: 80px;
+
+		/*background: gold;*/
+	}
+
+	.menu {
+
+		height: 50px;
+
+		background: gold;
+
+	}
+
+	.content {
+
+		height: 450px;
+
+		background:#fff;
+
+	}
+
+	#browser {
+
+		width: 55%;
+
+		height: 450px;
+
+		border: 1px solid skyblue;
+
+		float:right;
+
+	}
+
+ 
+
+	#editor {
+
+		width: 40%; 
+
+		height: 450px;
+
+		border: 1px solid skyblue;
+
+		float:left;
+
+		resize: none;
+
+	}
+
+ 
+
+	.menu input[type="button"] {
+
+		margin: 5px 0 0 200px;
+
+		width: 120px;
+
+		height: 40px;
+
+	}
+
+</style>	
+
+
+
+
+</head>
+
+<body>
+
+<div class="main">
+
+	<div class="header"></div>
+
+	<div class="menu">
+
+		<input type="button" value="RUN" onclick="myTRY()"/>
+
+	</div>
+
+	<div class="content">
+
+		<div id="browser"></div>
+
+		<textarea id="editor">
+
+		</textarea>
+
+	</div>
+
+</div>	
+</body>
+ 
+
+<script type="text/javascript">
+
+function myTRY() {
+
+		alert("myTRY()");
+
+		var code = document.getElementById("editor").value;
+
+		document.getElementById("browser").innerHTML = code;
+
+	}	
+
+</script>
+
+</html>
+
+ 
