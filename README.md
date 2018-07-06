@@ -38,3 +38,18 @@
 			<artifactId>spring-test</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
+		
+		
+		
+		
+		
+--------------------------------------------------------------------------------------------------------------------------------------
+
+# root-context.xml (1st)
+
+<bean id="datasource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+	<property name="driverClassName" value="com.mysql.jdbc.Driver"></property> 
+	<property name="url"   value="jdbc:mysql://127.0.0.1:3306/mysql?useUnicode=true&amp;characterEncoding=UTF-8"></property>
+	<property name="username"        value="xman"></property>
+	<property name="password"        value="tuca7996"></property>
+</bean>
