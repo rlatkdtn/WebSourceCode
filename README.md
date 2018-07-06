@@ -45,11 +45,38 @@
 		
 --------------------------------------------------------------------------------------------------------------------------------------
 
+
+# root-context.xml (2nd)
+<bean id="datasource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+    <property name="driverClassName" 
+	      value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy">
+    </property>
+    <property name="url" 
+              value="jdbc:log4jdbc:mysql://127.0.0.1:3306/mysql?         zeroDateTimeBehavior=convertToNull&amp;useUnicode=true&amp;characterEncoding=UTF-8">           
+    </property>
+    <property name="username"   value="root"></property>
+    <property name="password"   value="12345"></property>
+</bean>
+
+<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+	<property name="dataSource"      ref  ="datasource"></property>
+	<property name="configLocation"  value="classpath:/mybatis-config.xml"></property>
+	<property name="mapperLocations" value="classpath:/mappers/**/*Mapper.xml"></property>
+</bean>
+
+
+
+
+
 # root-context.xml (1st)
 
 <bean id="datasource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 	<property name="driverClassName" value="com.mysql.jdbc.Driver"></property> 
 	<property name="url"   value="jdbc:mysql://127.0.0.1:3306/mysql?useUnicode=true&amp;characterEncoding=UTF-8"></property>
-	<property name="username"        value="xman"></property>
-	<property name="password"        value="tuca7996"></property>
+	<property name="username"        value="root"></property>
+	<property name="password"        value="12345"></property>
 </bean>
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+
